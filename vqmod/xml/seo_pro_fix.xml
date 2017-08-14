@@ -1,0 +1,25 @@
+<modification>
+        <id>Seo_pro fix</id>
+        <version>1.0</version>
+        <vqmver>2.2.1</vqmver>
+        <author>slasoft</author>
+		<file path="admin/model/catalog/" name="product.php">
+			<operation>
+				<search position="after"  error="log"><![CDATA[$this->cache->delete('product']]></search>
+				<add><![CDATA[	$this->cache->delete('seo_pro');]]></add>
+			</operation>
+		</file>
+		<file path="admin/model/catalog/" name="category.php">
+			<operation>
+				<search position="after"  error="log"><![CDATA[$this->cache->delete('category']]></search>
+				<add><![CDATA[	$this->cache->delete('seo_pro');]]></add>
+			</operation>
+		</file>
+		<file path="admin/model/catalog/" name="information.php,manufacturer.php">
+			<operation>
+				<search position="after"  error="log"><![CDATA[$this->cache->delete(]]></search>
+				<add><![CDATA[	$this->cache->delete('seo_pro');]]></add>
+			</operation>
+		</file>
+		
+</modification>		

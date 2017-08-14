@@ -1,0 +1,5 @@
+2017-08-11 9:13:52 - PHP Notice:  Use of undefined constant language - assumed 'language' in C:\xampp\htdocs\ptd.loc\catalog\view\theme\styletour\template\common\language.tpl on line 6
+2017-08-11 9:13:52 - PHP Notice:  Undefined variable: text in C:\xampp\htdocs\ptd.loc\catalog\view\theme\styletour\template\common\language.tpl on line 6
+2017-08-11 16:23:01 - PHP Notice:  Undefined index: symbol-left in C:\xampp\htdocs\ptd.loc\catalog\view\theme\styletour\template\common\currency.tpl on line 5
+2017-08-11 16:23:01 - PHP Notice:  Undefined index: symbol-left in C:\xampp\htdocs\ptd.loc\catalog\view\theme\styletour\template\common\currency.tpl on line 5
+2017-08-11 16:23:01 - PHP Notice:  Undefined index: symbol-left in C:\xampp\htdocs\ptd.loc\catalog\view\theme\styletour\template\common\currency.tpl on line 5
