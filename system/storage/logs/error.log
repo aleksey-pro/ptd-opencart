@@ -3,3 +3,12 @@
 2017-08-11 16:23:01 - PHP Notice:  Undefined index: symbol-left in C:\xampp\htdocs\ptd.loc\catalog\view\theme\styletour\template\common\currency.tpl on line 5
 2017-08-11 16:23:01 - PHP Notice:  Undefined index: symbol-left in C:\xampp\htdocs\ptd.loc\catalog\view\theme\styletour\template\common\currency.tpl on line 5
 2017-08-11 16:23:01 - PHP Notice:  Undefined index: symbol-left in C:\xampp\htdocs\ptd.loc\catalog\view\theme\styletour\template\common\currency.tpl on line 5
+2017-08-14 10:28:09 - PHP Warning:  mail(): SMTP server response: 553 We do not relay non-local mail, sorry. in C:\xampp\htdocs\ptd.loc\system\library\mail.php on line 158
+2017-08-16 14:55:47 - PHP Notice:  Use of undefined constant Sname - assumed 'Sname' in C:\xampp\htdocs\ptd.loc\catalog\view\theme\styletour\template\common\header.tpl on line 47
+2017-08-16 16:49:59 - PHP Notice:  Undefined index: name in C:\xampp\htdocs\ptd.loc\catalog\view\theme\styletour\template\extension\module\slideshow.tpl on line 21
+2017-08-16 17:23:07 - PHP Notice:  Undefined variable: http://localhost/ptd.loc/ptd.loc/index.php?route=common/home in C:\xampp\htdocs\ptd.loc\catalog\view\theme\styletour\template\common\header.tpl on line 97
+2017-08-16 17:27:06 - PHP Notice:  Undefined variable: ogg_url in C:\xampp\htdocs\ptd.loc\catalog\view\theme\styletour\template\common\header.tpl on line 97
+2017-08-18 11:23:06 - PHP Notice:  Undefined index: thump in C:\xampp\htdocs\ptd.loc\catalog\view\theme\styletour\template\extension\module\featured.tpl on line 7
+2017-08-18 11:23:06 - PHP Notice:  Undefined index: thump in C:\xampp\htdocs\ptd.loc\catalog\view\theme\styletour\template\extension\module\featured.tpl on line 7
+2017-08-18 11:23:06 - PHP Notice:  Undefined index: thump in C:\xampp\htdocs\ptd.loc\catalog\view\theme\styletour\template\extension\module\featured.tpl on line 7
+2017-08-18 11:23:06 - PHP Notice:  Undefined index: thump in C:\xampp\htdocs\ptd.loc\catalog\view\theme\styletour\template\extension\module\featured.tpl on line 7

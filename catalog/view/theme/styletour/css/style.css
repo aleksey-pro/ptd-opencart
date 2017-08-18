@@ -36,12 +36,12 @@ h3{
 .menu-top .navbar-default .navbar-nav > li > a:hover{
 	text-decoration: underline;
 }
-.menu-top .navbar-default .navbar-nav > li > a.btn-red{
+.menu-top .navbar-default .navbar-nav > li > button.btn-red{
 	color: #fff;
 	border-radius: 3px;
 	padding: 5px 20px;
 }
-.menu-top .navbar-default .navbar-nav > li > a.btn-red:hover{
+.menu-top .navbar-default .navbar-nav > li > button.btn-red:hover{
 	background: #ec4835;
 	text-decoration: none;
 }
@@ -65,8 +65,9 @@ h3{
 .main-menu .navbar-inverse{
 	background: transparent;
 	border: none;
+	margin-top: 15px;
 }
-.main-menu{
+.common-home .main-menu{
 	position: absolute;
 	z-index: 21;
 	width: 100%;
@@ -94,7 +95,7 @@ h3{
 }
 .main-menu .navbar-brand span{
 	display: inline-block;
-	padding: 15px;
+	padding: 15px 15px 15px 25px;
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #fff;
@@ -359,6 +360,7 @@ section.menu-carousel{
 	height: 452px;
 	overflow: hidden;
 	transition: all .5s;
+	margin-bottom: 20px;
 }
 .product:hover{
 	box-shadow: 0 0 16px rgba(0, 0, 0, .5);
@@ -497,6 +499,15 @@ section.menu-carousel{
 	padding: 25px 0;
 }
 
+.main-menu a.navbar-brand span.common-home{
+	padding-left: 15px;
+}
+
+
+.cats ul{
+	padding-left: 20px;
+}
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
 	.menu-top .navbar-nav,
@@ -563,6 +574,10 @@ section.menu-carousel{
 	}
 }
 
+.menu-top {
+	margin-bottom: 15px;
+}
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 	.main-menu .container{
@@ -576,9 +591,7 @@ section.menu-carousel{
 	.products-row{
 		margin: 20px 0;
 	}
-	.product{
-		margin-bottom: 10px;
-	}
+
 }
 @media only screen and (max-width : 767px) {
 	.menu-top .navbar-default .navbar-nav > li > a:hover{
@@ -658,3 +671,23 @@ section.menu-carousel{
 		display: block !important;
 	}
 }
+
+
+.dropdown-menu li a {
+	clear: both;
+	color: #333;
+	display: block;
+	font-weight: 400;
+	line-height: 1.23857;
+	padding: 3px 20px;
+	white-space: nowrap;
+}
+
+.dropdown-menu li a img{
+	margin-right: 10px;
+}
+
+span.glyphicon-shopping-cart{
+	margin-right: 5px;
+}
+

@@ -31,49 +31,38 @@
 					<div class="col-md-10">
 						<div class="row">
 							<div class="col-md-3 col-xs-6">
-								<h5>Help &amp; Info</h5>
+								<h5><?=$text_information?></h5>
 								<ul>
-									<li><a href="#">Delivery</a></li>
-									<li><a href="#">Returns &amp; Refunds</a></li>
-									<li><a href="#">Contact Us</a></li>
-									<li><a href="#">Track your Order</a></li>
-									<li><a href="#">Reglaze Service</a></li>
-									<li><a href="#">Lens Price Comparison</a></li>
-									<li><a href="#">A - Z Brands</a></li>
-									<li><a href="#">FAQ's</a></li>
+								<?php foreach($informations as $information): ?>
+									<li><a href="<?=$information['href']?>"><?=$information['title']?></a></li>
+								<?php endforeach; ?>
 								</ul>
 							</div>
 							<div class="col-md-3 col-xs-6">
-								<h5>Brands we sell</h5>
+								<h5><?=$text_service?></h5>
 								<ul>
-									<li><a href="#">Noosa Amsterdam</a></li>
-									<li><a href="#">Cream Clothing</a></li>
-									<li><a href="#">Taschendieb</a></li>
-									<li><a href="#">Hermes paris</a></li>
-									<li><a href="#">D&amp;G Fashion</a></li>
+						          <li><a href="<?=$contact; ?>"><?=$text_contact; ?></a></li>
+						          <li><a href="<?=$return; ?>"><?=$text_return; ?></a></li>
+						          <li><a href="<?=$sitemap; ?>"><?=$text_sitemap; ?></a></li>
 								</ul>
 							</div>
 							<div class="clearfix visible-xs-block visible-sm-block"></div>
 							<div class="col-md-3 col-xs-6">
-								<h5>Care &amp; advice</h5>
+								<h5><?=$text_extra?></h5>
 								<ul>
-									<li><a href="#">Prescription Information</a></li>
-									<li><a href="#">Lenses &amp; Coatings</a></li>
-									<li><a href="#">PD Measurement</a></li>
-									<li><a href="#">Style Advice</a></li>
-									<li><a href="#">Size Guide</a></li>
-									<li><a href="#">Shopping Guide</a></li>
+						          <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
+						          <li><a href="<?php echo $voucher; ?>"><?php echo $text_voucher; ?></a></li>
+						          <li><a href="<?php echo $affiliate; ?>"><?php echo $text_affiliate; ?></a></li>
+						          <li><a href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li>
 								</ul>
 							</div>
 							<div class="col-md-3 col-xs-6">
-								<h5>Company</h5>
+								<h5><?php echo $text_account; ?></h5>
 								<ul>
-									<li><a href="#">About Us</a></li>
-									<li><a href="#">Our Store</a></li>
-									<li><a href="#">Terms &amp; Conditions</a></li>
-									<li><a href="#">Privacy Policy</a></li>
-									<li><a href="#">Cookies</a></li>
-									<li><a href="#">Find us</a></li>
+						          <li><a href="<?=$account; ?>"><?=$text_account; ?></a></li>
+						          <li><a href="<?=$order; ?>"><?=$text_order; ?></a></li>
+						          <li><a href="<?=$wishlist; ?>"><?=$text_wishlist; ?></a></li>
+						          <li><a href="<?=$newsletter; ?>"><?=$text_newsletter; ?></a></li>
 								</ul>
 							</div>
 						</div>
@@ -93,7 +82,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4">
-						<p>&copy; 2014 Fashion Store. All Rights Reserved.</p>
+						<p>&copy; 2014 - <?=date('Y')?> Fashion Store. All Rights Reserved.</p>
 					</div>
 					<div class="col-md-8 text-right pay">
 						<a href="#"><img src="catalog/view/theme/styletour/img/pay1.jpg" alt=""></a>
