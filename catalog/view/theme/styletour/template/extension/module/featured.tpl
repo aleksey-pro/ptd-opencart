@@ -14,7 +14,13 @@
 				</p>
 				<div class="product-buy">
 					<p class="product-price">
-						<?=$product['price']?>
+						Price:
+						<?php if(!$product['special']):?>
+							<?=$product['price']?>
+						<?php else:?>
+							<span class="price-new"><?=$product['special']?></span>
+							<span class="price-old"><?=$product['price']?></span>
+						<?php endif;?>
 					</p>
 					<button href="#" class="btn btn-default" onclick="cart.add('<?php echo $product['product_id']; ?>')" >add to cart</button>
 				</div><!-- /.product-buy -->

@@ -33,7 +33,7 @@ $(document).ready(function() {
 	});
 
 	// Currency
-	$('#form-currency .currency-select').on('click', function(e) {
+	$('#form-currency a').on('click', function(e) {
 		e.preventDefault();
 
 		$('#form-currency input[name=\'code\']').val($(this).attr('name'));
@@ -42,7 +42,7 @@ $(document).ready(function() {
 	});
 
 	// Language
-	$('#form-language .language-select').on('click', function(e) {
+	$('#form-language a').on('click', function(e) {
 		e.preventDefault();
 
 		$('#form-language input[name=\'code\']').val($(this).attr('name'));
@@ -83,9 +83,9 @@ $(document).ready(function() {
 
 	// Product List
 	$('#list-view').click(function() {
-		$('#content .product-grid > .clearfix').remove();
+		// $('#content .product-grid > .clearfix').remove();
 
-		$('#content .row > .product-grid').attr('class', 'product-layout product-list col-xs-12');
+		$('.product-grid').attr('class', 'product-layout product-list col-xs-12');
 		$('#grid-view').removeClass('active');
 		$('#list-view').addClass('active');
 
@@ -95,15 +95,18 @@ $(document).ready(function() {
 	// Product Grid
 	$('#grid-view').click(function() {
 		// What a shame bootstrap does not take into account dynamically loaded columns
-		var cols = $('#column-right, #column-left').length;
+		// var cols = $('#column-right, #column-left').length;
 
-		if (cols == 2) {
-			$('#content .product-list').attr('class', 'product-layout product-grid col-lg-6 col-md-6 col-sm-12 col-xs-12');
-		} else if (cols == 1) {
-			$('#content .product-list').attr('class', 'product-layout product-grid col-lg-4 col-md-4 col-sm-6 col-xs-12');
-		} else {
-			$('#content .product-list').attr('class', 'product-layout product-grid col-lg-3 col-md-3 col-sm-6 col-xs-12');
-		}
+		// if (cols == 2) {
+		// 	$('#content .product-list').attr('class', 'product-layout product-grid col-lg-6 col-md-6 col-sm-12 col-xs-12');
+		// } else if (cols == 1) {
+		// 	$('#content .product-list').attr('class', 'product-layout product-grid col-lg-4 col-md-4 col-sm-6 col-xs-12');
+		// } else {
+		// 	$('#content .product-list').attr('class', 'product-layout product-grid col-lg-3 col-md-3 col-sm-6 col-xs-12');
+		// }
+
+		$('.product-list').attr('class', 'product-layout product-grid col-sm-4');
+
 
 		$('#list-view').removeClass('active');
 		$('#grid-view').addClass('active');
@@ -157,7 +160,7 @@ var cart = {
 				}
 
 				if (json['success']) {
-					// $('#cart').parent().before(json['success']);
+					// $('#content').parent().before(json['success']);
 
 					// Need to set timeout otherwise it wont update the total
 					setTimeout(function () {
@@ -166,8 +169,7 @@ var cart = {
 
 					// $('html, body').animate({ scrollTop: 0 }, 'slow');
 
-					$('#cart > .modal-body').load('index.php?route=common/cart/info .modal-body');
-
+					$('#cart .modal-body').load('index.php?route=common/cart/info .modal-body');
 					$('#cart').modal();
 				}
 			},
@@ -228,7 +230,7 @@ var cart = {
 				if ((now_location == '/cart/') || (now_location == '/checkout/') || (getURLVar('route') == 'checkout/cart') || (getURLVar('route') == 'checkout/checkout')) {
 					location = 'index.php?route=checkout/cart';
 				} else {
-					$('#cart > ul').load('index.php?route=common/cart/info ul li');
+					$('#cart .modal-body').load('index.php?route=common/cart/info .modal-body');
 				}
 			},
 			error: function(xhr, ajaxOptions, thrownError) {

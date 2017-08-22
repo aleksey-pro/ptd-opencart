@@ -1,7 +1,4 @@
-*TO-DO*
 
-Исправить:
+в файле .htaccess изменено RewriteBase / на RewriteBase /ptd.loc/
 
-- ЧПУ
-- меню категорий
-- корзина - не удаляются товары
+оформление капчи в view/theme/defalt/templae/extension/captcha/baci-captcha.tpl

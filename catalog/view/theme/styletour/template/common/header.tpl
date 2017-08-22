@@ -11,7 +11,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:700,400,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link href="catalog/view/theme/styletour/css/bootstrap.min.css" rel="stylesheet">
 	<link href="catalog/view/theme/styletour/css/style.css" rel="stylesheet">
-		<script src="catalog/view/theme/styletour/js/modernizr.custom.17475.js"></script>
+	<script src="catalog/view/theme/styletour/js/modernizr.custom.17475.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="catalog/view/theme/styletour/js/bootstrap.min.js"></script>
 	<script src="catalog/view/theme/styletour/js/common.js"></script>
@@ -20,10 +20,10 @@
 		<link href="<?=$link['href']?>" rel="<?=$link['rel']?>">
 	<?php endforeach; ?>
 	<?php foreach($styles as $style): ?>
-		<link href="<?=$style['href']?>" rel="<?=$style['rel']?>" type="text/css" media="<?=$style['media']?>">		
+		<link href="<?=$style['href']?>" rel="<?=$style['rel']?>" type="text/css" media="<?=$style['media']?>">
 	<?php endforeach; ?>
 	<?php foreach($scripts as $script): ?>
-		<link href="<?=$script?>"></script>	
+		<script src="<?=$script?>"></script>
 	<?php endforeach; ?>
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -31,6 +31,7 @@
 <![endif]-->
 </head>
 <body class="<?=$class?>">
+	
 	<header>
 		<div class="menu-top">
 			<nav class="navbar navbar-default">
@@ -56,24 +57,22 @@
 						</ul>
 
 						<ul class="nav navbar-nav navbar-right">
-							<?php if($logged):?>
-								<li class="dropdown">
-									<a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>"class="dropdown-toggle" data-toggle="dropdown"><?php echo $text_account; ?><span class="caret"></span></a>
-									<ul class="dropdown-menu">
-							            <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
-							            <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
-							            <li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>
-							            <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
-							            <li><a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
-										</li>
-									</ul>
-								</li>
-							<?php else: ?>
-								<li><a href="<?=$login?>"><?=$text_login?></a></li>
-								<li><a href="<?=$register?>"><?=$text_register?></a></li>
-							<?php endif; ?>
-								<?=$cart?>
-							<!-- <li><a href="#" class="btn-red"><span class="glyphicon glyphicon-shopping-cart"></span>shopping cart</a></li> -->
+						<?php if($logged): ?>
+							<li class="dropdown">
+								<a href="<?=$account?>" class="dropdown-toggle" data-toggle="dropdown"><?=$text_account?> <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
+						            <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
+						            <li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>
+						            <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
+						            <li><a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
+								</ul>
+							</li>
+						<?php else: ?>
+							<li><a href="<?=$login?>"><?=$text_login?></a></li>
+							<li><a href="<?=$register?>"><?=$text_register?></a></li>
+						<?php endif; ?>
+							<?=$cart?>
 						</ul>
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
@@ -92,10 +91,10 @@
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
 								</button>
-								<a class="navbar-brand" href="<?=$home?>">							
-									<?php if($home == $og_url): ?>
-										<img src="<?=$logo?>" alt="<?=$name?>">
-									<?php endif; ?>
+								<a class="navbar-brand" href="<?=$home?>">
+								<?php if($home == $og_url): ?>
+									<img src="<?=$logo?>" alt="<?=$name?>">
+								<?php endif; ?>
 									<span class="<?=$class?>"><?=$name?></span>
 								</a>
 							</div>
@@ -103,24 +102,23 @@
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse" id="main-menu">
 <ul class="nav navbar-nav">
-	<?php foreach($categories as $category): ?>
-		<?php if($category['children']):?>
-			<li class="dropdown">
-				<a href="<?=$category['href']?>" class="dropdown-toggle" data-toggle="dropdown"><?=$category['name']?><span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<?php foreach($category['children'] as $child): ?>
-						<li><a href="<?=$child['href']?>"><?=$child['name']?></a></li>
-					<?php endforeach; ?>
-				<li class="divider" role="separator"></li>
+<?php foreach($categories as $category): ?>
+	<?php if($category['children']): ?>
+		<li class="dropdown">
+			<a href="<?=$category['href']?>" class="dropdown-toggle" data-toggle="dropdown"><?=$category['name']?> <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<?php foreach($category['children'] as $child): ?>
+					<li><a href="<?=$child['href']?>"><?=$child['name']?></a></li>
+				<?php endforeach; ?>
+				<li role="separator" class="divider"></li>
 				<li><a href="<?php echo $category['href']; ?>" class="see-all"><?php echo $text_all; ?> <?php echo $category['name']; ?></a></li>
-				</ul>				
-			</li>
-		<?php else: ?>
-			<li><a href="<?=$category['href']?>"><?=$category['name']?></a></li>
-		<?php endif; ?>
-	<?php endforeach; ?>	
+			</ul>
+		</li>
+	<?php else: ?>
+		<li><a href="<?=$category['href']?>"><?=$category['name']?></a></li>
+	<?php endif; ?>
+<?php endforeach; ?>
 </ul>
-								
 
 								<div class="nav navbar-nav navbar-right">
 									<form class="navbar-form navbar-left" role="search" method="get" action="">
@@ -140,9 +138,3 @@
 			</div><!-- /.main-menu -->
 		</div><!-- /.main-menu-wrap -->
 	</header>
-
-<!-- 	<section class="main-slogan">
-		<div class="container">
-			<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</h1>
-		</div>
-	</section> -->
